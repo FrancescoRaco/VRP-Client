@@ -26,6 +26,7 @@ Istruzioni per eseguire il runnable .jar:
 
 Note: per testare una linea bisogna scrivere semplicemente il numero corrispondente nel campo di testo e cliccare sul bottone desiderato; sono supportate le seguenti linee: 23, 30, 60, 64, 160, 218, 649, 671, 714, 716; i relativi file di testo sono memorizzati nella cartella "data/buses/" del file VRP-Client_[SO-Name].jar
 
-![RacoMaps](https://user-images.githubusercontent.com/51203516/59979503-0aa4c580-95e9-11e9-8f5b-6c8d758366b7.png)
-![RacoMaps2](https://user-images.githubusercontent.com/51203516/59979685-07123e00-95eb-11e9-90ca-00b2c713d4a8.png)
-![RacoMaps3](https://user-images.githubusercontent.com/51203516/59979687-0f6a7900-95eb-11e9-8b20-07da58642004.png)
+![racoMaps1](https://user-images.githubusercontent.com/51203516/60122532-aec37380-9785-11e9-83d0-aeec4fc784d1.png)
+![racoMaps2](https://user-images.githubusercontent.com/51203516/60122546-b420be00-9785-11e9-9d13-e20d83dba4e9.png)
+![racoMaps3](https://user-images.githubusercontent.com/51203516/60122553-bb47cc00-9785-11e9-84c1-fdaeb0290565.png)
+![racoMaps4](https://user-images.githubusercontent.com/51203516/60122560-c13dad00-9785-11e9-9f21-65b27fd9a5a8.png)
