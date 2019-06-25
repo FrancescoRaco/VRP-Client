@@ -17,9 +17,9 @@ Istruzioni per importare il progetto client nell'ambiente di sviluppo:
 Istruzioni per eseguire il runnable .jar:
 
 - Scaricare il file .jar eseguibile specifico per la piattaforma in uso:
-- Linux: https://drive.google.com/open?id=1DjP9LEvvLSDidw8LIZRXftqj48kM9GSf
-- Mac: https://drive.google.com/open?id=1pd7h21NvA-qb4Ks0SuxLzxenWucPrcxM
-- Windows: https://drive.google.com/open?id=1074eRdutncWAz34xZxHVBQU12zY5-JZx
+- Linux: https://drive.google.com/open?id=1gwPQ9lALTu2EaBeBMRG6_c3o1OG3GykC
+- Mac: https://drive.google.com/open?id=1kwASLNG1Y842VYGOoczxm6VcDfivWaxT
+- Windows: https://drive.google.com/open?id=1JXj2MPjffl37SA-n9A6Us1eDSk1WXIVP
 - Estrarre la cartella "bin" dalla radice del file .jar appena scaricato e posizionarne tutti i file .so/.dylib/.dll all'interno della cartella "bin" relativa invece al percorso della JVM in uso (JDK 11+)
 - Assicurarsi che il file .jar sia eseguito dall'applicazione javaw (all'interno della cartella "bin" relativa alla JVM in uso)
 - Eseguire il programma VRP-Client_[SO-Name].jar mediante doppio click del mouse (oppure da linea di comando utilizzando la seguente sintassi: java -jar nomeFile.jar)
