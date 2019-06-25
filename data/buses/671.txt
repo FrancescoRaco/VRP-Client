@@ -1,0 +1,41 @@
+﻿70900 Nervi/Palazzo Sport, Roma
+78481 Colombo/Europa, Roma
+70727 Arte/America, Roma
+72882 Aeronautica/Arte, Roma
+72883 Aeronautica/Montagne Rocciose, Roma
+78678 Laurentina, Roma
+78679 Laurentina/Serafico, Roma
+75672 Laurentina, Roma
+77401 Laurentina, Roma
+82418 Ardigo', Roma
+74405 Acri/Ardigo', Roma
+74406 Mirandola/Montagnola, Roma
+74407 Mirandola/Vera, Roma
+74408 Mirandola/Grotta Perfetta, Roma
+73682 Ambrosini/Leonori, Roma
+73683 Ambrosini/Accademia Platonica, Roma
+74602 Ambrosini, Roma
+74603 Mantegna/Georgofili, Roma
+75690 Tor Marancia/Mantegna, Roma
+75471 Tor Marancia, Roma
+75694 Rufino, Roma
+70667 Navigatori, Roma
+70668 Colombo, Roma
+70670 Colombo/C.ne Ostiense, Roma
+70671 Terme Caracalla/Porta Ardeatina, Roma
+70672 Terme Caracalla, Roma
+70555 Porta Metronia, Roma
+75696 Gallia/Licia, Roma
+75697 Gallia/Saturnia, Roma
+75698 Soana, Roma
+75699 Cerveteri, Roma
+75487 Appia Nuova, Roma
+75488 Appia Nuova, Roma
+75489 Alberone, Roma
+75490 Appia Nuova, Roma
+75491 Appia Nuova, Roma
+75700 Appia Nuova, Roma
+75555 Appia Nuova, Roma
+75556 Appia Nuova, Roma
+78875 Arco Di Travertino, Roma
+81911 Arco Di Travertino, Roma			
