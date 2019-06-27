@@ -266,7 +266,7 @@ public class Main extends Application
         gridPane.setAlignment(Pos.CENTER_LEFT);
        
         //Create label by program title string
-        Label title = new Label("      Rotte Autobus");
+        Label title = new Label("   Rotte Autobus");
         
         //Set title font
         title.setFont(Font.loadFont(ClassLoader.getSystemClassLoader().getResourceAsStream(FONT), 16));
