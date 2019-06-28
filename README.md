@@ -17,7 +17,7 @@ Istruzioni per importare il progetto client nell'ambiente di sviluppo:
 Istruzioni per eseguire il runnable .jar:
 
 - Scaricare il file .jar eseguibile specifico per la piattaforma in uso:
-- Linux: https://drive.google.com/open?id=13PurA2Am92P3K_7A585ykWBpsvnYpNK_
+- Linux: https://drive.google.com/open?id=13PurA2Am92P3K_7A585ykWBpsvnYpNK
 - Mac: https://drive.google.com/open?id=1bPuVbeY-rAE62a6tyYE_6cwBwQxhDY9E
 - Windows: https://drive.google.com/open?id=1GCuBzjV6huxtfPH7nStYQNWalrIiB4py
 - Estrarre la cartella "bin" dalla radice del file .jar appena scaricato e posizionarne tutti i file .so/.dylib/.dll all'interno della cartella "bin" relativa invece al percorso della JVM in uso (JDK 11+)
