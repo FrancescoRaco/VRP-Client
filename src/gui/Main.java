@@ -5,6 +5,7 @@ import client.Client;
 import client.OutputChoice;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -79,55 +80,64 @@ public class Main extends Application
 		//Show status info
 		status.setText("Sto lavorando...Attendere...");
 		
-		//Instantiate new Thread passing a Runnable object as argument:
-		//a lambda expression defines it with the specific implementation of the method run()
-		Thread thread = new Thread(() ->
+		//Instantiate new Task overriding the method call():
+		//This is useful to separate graphical and logical threads
+		Task task = new Task<Void>()
 		{
-			//Get file input name
-			String input = txtField.getText();
-		    
-			//Instantiate the client by server host name and TCP connection port
-			Client client = new Client(HOST, PORT);
-		    
-		    //Estimated alert header text
-			final String ESTIMATEDHEADERTEXT = "Risposta del server:";
-			
-			//Estimated server output by chosen output type and path + file input name
-			final String ESTIMATEDSERVEROUTPUT= client.getServerOutput(oc, BUSESPATH + input + BUSFILEFORMAT);
-		    
-		    //Run the specified Runnable argument at some unspecified time in the future:
-			//a lambda expression defines it with the specific implementation of the method run();
-			//this is useful for showing the status label meanwhile client waits for server answer
-			Platform.runLater(() ->
+		    @Override public Void call()
 		    {
-		    	//Initialize default values of alert header text and server output
-		    	String headerText = ESTIMATEDHEADERTEXT;
-		    	String serverOutput = ESTIMATEDSERVEROUTPUT;
+		    	//Get file input name
+		    	String input = txtField.getText();
+		    
+			    //Instantiate the client by server host name and TCP connection port
+			    Client client = new Client(HOST, PORT);
+		    
+		        //Estimated alert header text
+			    final String ESTIMATEDHEADERTEXT = "Risposta del server:";
+			
+			    //Estimated server output by chosen output type and path + file input name (without initial and ending white spaces)
+			    final String ESTIMATEDSERVEROUTPUT= client.getServerOutput(oc, BUSESPATH + input.trim() + BUSFILEFORMAT);
+		    
+		        //Run the specified Runnable argument at some unspecified time in the future:
+			    //a lambda expression defines it with the specific implementation of the method run();
+			    //this is useful for showing the status label meanwhile client waits for server answer
+			    Platform.runLater(() ->
+		        {
+		    	    //Initialize default values of alert header text and server output
+		    	    String headerText = ESTIMATEDHEADERTEXT;
+		    	    String serverOutput = ESTIMATEDSERVEROUTPUT;
 		    	
-		    	//If the client found problems
-				if (ESTIMATEDSERVEROUTPUT.startsWith(Client.MARK))
-				{
-					//Set alert header text specifying that this is a client message
-					headerText = "Comunicazione del client:";
+		    	    //If the client found problems
+				    if (ESTIMATEDSERVEROUTPUT.startsWith(Client.MARK))
+				    {
+					    //Set alert header text specifying that this is a client message
+					    headerText = "Comunicazione del client:";
 					
-					//Remove client mark from the alert content text
-					serverOutput = ESTIMATEDSERVEROUTPUT.replaceFirst(Client.MARK, " ").trim();
-				}
+					    //Remove client mark from the alert content text
+					    serverOutput = ESTIMATEDSERVEROUTPUT.replaceFirst(Client.MARK, " ").trim();
+				    }
 		    	
-		    	//Get scrolling alert (containing informations regarding server output) and show it
-		    	getScrollingAlertAndShowIt(AlertType.INFORMATION, description, headerText, serverOutput);
+		    	    //Get scrolling alert (containing informations regarding server output) and show it
+		    	    getScrollingAlertAndShowIt(AlertType.INFORMATION, description, headerText, serverOutput);
 		    	
-		    	//clear the text field
-				txtField.clear();
+		    	    //clear the text field
+				    txtField.clear();
 		    	
-		    	//Reset status info
-		    	status.setText("");
-		    });
-		});
+		    	    //Reset status info
+		    	    status.setText("");
+		        });
+		    	
+		       //Return null
+		       return null;
+		    };
+		}; 		
 		
+		//Create new Thread object passing task as argument
+		Thread thread = new Thread(task);
+				
 		//Mark this thread as either a daemon thread or a user thread
 		thread.setDaemon(true);
-        
+		        
 		//Begin execution of the thread; method start() invokes run() method implemented before
 		thread.start();
 	}
