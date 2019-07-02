@@ -91,8 +91,8 @@ public class Client
 				if (out != null) out.close();
 				if (in != null) in.close();
 				if (echoSocket != null) echoSocket.close();
-			}
-			catch (IOException e) {}
+		    }
+		    catch (IOException e) {}
 	}
 	
 	/**
