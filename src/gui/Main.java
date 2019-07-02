@@ -114,7 +114,7 @@ public class Main extends Application
 				   headerText = "Comunicazione del client:";
 					
 				   //Remove client mark from the alert content text
-				   serverOutput = ESTIMATEDSERVEROUTPUT.replaceFirst(Client.MARK, " ").trim();
+				   serverOutput = ESTIMATEDSERVEROUTPUT.replaceFirst(Client.MARK, "").trim();
 			     }
 		    	
 		    	    //Get scrolling alert (containing informations regarding server output) and show it
